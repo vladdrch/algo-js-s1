@@ -19,5 +19,6 @@ function calcul(nombre1, nombre2) {
     return nombre1-nombre2
 }
    
-let solution = calcul(10,3)
-console.log(solution)
+let resultat = calcul(10,3)
+console.log(resultat)
+        

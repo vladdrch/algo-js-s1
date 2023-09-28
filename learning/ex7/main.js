@@ -1,8 +1,8 @@
 let user = {
-    firstName : "Hector",
-    lastName : "Cladier",
+  firstName : "Hector",
+   lastName : "Cladier",
     passion : "football",
-    birthdate : 2005
+   birthdate : 2005
 }
 
 
