@@ -8,16 +8,17 @@ class Pokemon {
     }
 
     isLucky(){
-        const Numrand = Math.floor(Math.random());
+        const Numrand = Math.floor(Math.random()*100);
         return Numrand <= this.luck;
     }
 
     attackPokemon(qlf) {
         qlf.pv -= this.atk
+        //qlf.pv += qlf.def
     }
 }
-    let Rayquaza = new Pokemon("Rayquaza", 180, 35, 20,0.5)
-    let Giratina = new Pokemon("Giratina",180, 15, 30,0.2)
+    let Rayquaza = new Pokemon("Rayquaza", 180, 35, 20, 50)
+    let Giratina = new Pokemon("Giratina", 180, 15, 30, 80)
  
 
     console.log(Giratina)   
@@ -27,12 +28,14 @@ class Pokemon {
 
     if (Rayquaza.isLucky())  {
         console.log(Rayquaza.name + ' is lucky')
+        console.log('GIRATINA dommage ' + (Rayquaza.atk - Giratina.def ))
         Rayquaza.attackPokemon(Giratina)
-        console.log(' Giratina degat' +Rayquaza.atk - Giratina.def )
+        
     } else {
-        console.log(Rayquaza.name + ' no lucky')
+        console.log(Giratina.name + ' is lucky')
+        console.log('RAYQUAZA dommage '+ (Giratina.atk - Rayquaza.def ))
         Giratina.attackPokemon(Rayquaza)
-        console.log(' Rayquaza degat'+Giratina.atk - Rayquaza.def )
+        
     }
     
     console.log(Giratina)   
@@ -40,8 +43,8 @@ class Pokemon {
 
 }
  if (Rayquaza.pv >0) {
-    console.log('Giratina si DEAD !! :(')   
+    console.log('GIRATINA is DEAD !! :(')   
 
  }else{
-    console.log('Rayquaza si DEAD !! :(')  
+    console.log('RAYQUAZA is DEAD !! :(')  
  }  
