@@ -20,14 +20,12 @@ class Character {
               Nbtaxichange ++;
               console.log('_____________TAXI CHANGE___________ >>' + Nbtaxichange);
               }
-              // console.log(Nbtaxichange);
-               //console.log(NbFirepassed);
-               //console.log(this.samnt);
-         
-          if (this.sanity===0){
+                       
+            if (this.sanity===0){
               console.log(this.name + ' EXPLODED !');
               break;
-          }
+             }
+             
             if (NbFirepassed===30){
               console.log(this.name + ' AT HOME !! WIth ' +Nbtaxichange+' TAXI CHANGING');
               break;
